@@ -16,22 +16,35 @@ const (
 
 type (
 	Repo struct {
-		Owner string `json:"owner"`
-		Name  string `json:"name"`
+		Scm      string `json:"scm"`
+		Owner    string `json:"owner"`
+		Name     string `json:"name"`
+		Link     string `json:"link"`
+		Avatar   string `json:"avatar"`
+		Branch   string `json:"branch"`
+		Private  bool `json:"private"`
+		Trusted  bool `json:"trusted"`
 	}
 
 	Build struct {
-		Tag     string `json:"tag"`
-		Event   string `json:"event"`
-		Number  int    `json:"number"`
-		Commit  string `json:"commit"`
-		Ref     string `json:"ref"`
-		Branch  string `json:"branch"`
-		Author  string `json:"author"`
-		Status  string `json:"status"`
-		Link    string `json:"link"`
-		Started int64  `json:"started"`
-		Created int64  `json:"created"`
+		Tag      string `json:"tag"`
+		Number   int    `json:"number"`
+		Event    string `json:"event"`
+		Status   string `json:"status"`
+		Link     string `json:"link"`
+		Deploy   string `json:"deploy"`
+		Created  int64  `json:"created"`
+		Started  int64  `json:"started"`
+		Finished int64  `json:"finished"`
+		Url      string `json:"url"`
+		Commit   string `json:"commit"`
+		Ref      string `json:"ref"`
+		Branch   string `json:"branch"`
+		Clink    string `json:"clink"`
+		Message  string `json:"message"`
+		Author   string `json:"author"`
+		Email    string `json:"email"`
+		Avatar   string `json:"avatar"`
 	}
 
 	Config struct {
@@ -41,7 +54,12 @@ type (
 	}
 
 	Job struct {
+		Number  int
+		Status  string
+		Error   string
+		Code    int
 		Started int64
+		Finished int64
 	}
 
 	Plugin struct {
