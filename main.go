@@ -103,7 +103,7 @@ func main() {
 		cli.StringFlag{
 			Name:   "commit.message",
 			Usage:  "git commit message",
-			EnvVar: "DRONE_COMMIT_AUTHOR",
+			EnvVar: "DRONE_COMMIT_MESSAGE",
 		},
 		cli.StringFlag{
 			Name:   "commit.author",
@@ -238,7 +238,7 @@ func run(c *cli.Context) error {
 			Commit:   c.String("commit.sha"),
 			Ref:      c.String("commit.ref"),
 			Branch:   c.String("commit.branch"),
-			Clink:     c.String("commit.link"),
+			Clink:    c.String("commit.link"),
 			Message:  c.String("commit.message"),
 			Author:   c.String("commit.author"),
 			Email:    c.String("commit.author.email"),

@@ -31,20 +31,20 @@ type (
 		Number   int    `json:"number"`
 		Event    string `json:"event"`
 		Status   string `json:"status"`
-		Link     string `json:"link"`
-		Deploy   string `json:"deploy"`
-		Created  int64  `json:"created"`
-		Started  int64  `json:"started"`
-		Finished int64  `json:"finished"`
+		Link     string `json:"build_url"`
+		Deploy   string `json:"deploy_to"`
+		Created  int64  `json:"created_at"`
+		Started  int64  `json:"started_at"`
+		Finished int64  `json:"finished_at"`
 		Url      string `json:"url"`
 		Commit   string `json:"commit"`
 		Ref      string `json:"ref"`
 		Branch   string `json:"branch"`
-		Clink    string `json:"clink"`
+		Clink    string `json:"link_url"`
 		Message  string `json:"message"`
 		Author   string `json:"author"`
-		Email    string `json:"email"`
-		Avatar   string `json:"avatar"`
+		Email    string `json:"author_email"`
+		Avatar   string `json:"author_avatar"`
 	}
 
 	Config struct {
