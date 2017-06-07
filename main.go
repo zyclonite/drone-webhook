@@ -26,7 +26,7 @@ func main() {
 		cli.StringFlag{
 			Name:   "token",
 			Usage:  "token",
-			EnvVar: "PLUGIN_TOKEN",
+			EnvVar: "WEBHOOK_TOKEN,PLUGIN_TOKEN",
 		},
 		cli.BoolFlag{
 			Name:   "skip-verify",
